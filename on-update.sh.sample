@@ -1,0 +1,17 @@
+#!/bin/bash
+
+### Config ###
+REPOS_PATH='/repos'
+
+SSH_PATH='/home/githubhook/.ssh/id_rsa'
+SSH_PASS='pass'
+
+### Script ###
+expect -c "
+cd $REPOS_PATH/$1/
+spawn git --git-dir=.git pull origin master
+expect \"Enter passphrase for key '$SSH_PATH'\"; send \"$SSH_PASS\n\"
+
+interact
+"
+
