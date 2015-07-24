@@ -28,6 +28,7 @@ Copy ``on-update.sh.sample`` and edit it.
 
 ```
 $ cp on-update.sh.sample on-update.sh
+# chmod +x on-pudate.sh
 ```
 
 This script will pull the master branch from the origin when it is called in the initial state.
