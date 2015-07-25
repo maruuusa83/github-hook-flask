@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script will be taken one argument that is repository name.
+# It can be used as $1.
+
 ### Config ###
 REPOS_PATH='/repos'
 
